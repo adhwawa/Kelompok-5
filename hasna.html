@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HASNA OKTAVIA RAHMA</title>
+    <style>
+    @keyframes muncul {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animasi-muncul {
+        animation: muncul 1s ease-out;
+    }
+</style>
 </head>
 <body style="font-family: Arial, sans-serif; background-color: #e8eef7; margin: 0; padding: 40px 20px; color: #1e3a5f;">
-
-    <div style="max-width: 750px; margin: auto; background: white; padding: 35px; border-radius: 25px; box-shadow: 0 8px  8px; text-align: center;">
-        <h1 style="color: #0f3498; margin-bottom: 10px;">HELLO, I'M HASNA </h1>
+    
+    <div class="animasi-muncul" style="max-width: 750px; margin: auto; background: white; padding: 35px; border-radius: 25px; box-shadow: 0 8px 8px #c5d7ea; text-align: center;">        <h1 style="color: #0f3498; margin-bottom: 10px;">HELLO, I'M HASNA </h1>
         <p style="color: #64748b; margin-bottom: 25px;">Welcome to my personal profile!</p>
 
     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKrYJ1rLVJSWAnQOa8Xwe1NBpQdAfqlKdzhEXdy5E-TRXAOTeIEW1DzgwLyg3FfI--qHzqpi3pLNrbUhyDkZTgSjfRycnyD0bWhtu60w&s=10"
@@ -63,7 +78,7 @@
         Terima kasih telah mengunjungi profil saya    
     </footer>
 
-    <a href="index.html" style="color: #2563eb; text-decoration: none;">
+<a href="index.html" style="display: inline-block; margin-top: 20px; background: #246fc5; color: white; padding: 12px 20px; border-radius: 10px; text-decoration: none; box-shadow: 0 4px 0 #005ccc;">
     ← Kembali ke Halaman Utama
 </a>
 </div>
