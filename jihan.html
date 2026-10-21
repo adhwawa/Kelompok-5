@@ -1,11 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profil Anggota</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .main-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffe4e6;
+            border: 3px solid #f05c95;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 6px 15px rgba(255, 131, 183, 0.496);
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
+        }
+
+        .btn-back {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #881337;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-bottom: 10px;
+        }
+
+        .btn-back:hover {
+            background-color: #9f1239;
+            transform: scale(1.05);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #ff6694;
+            animation: slideDown 1s ease-out;
+        }
+
+        .profile-image img {
+            display: block;
+            margin: 20px auto;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fd7f9c;
+            box-shadow: 0 4px 8px rgba(255, 108, 177, 0.267);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: popUp 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        .profile-image img:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .cards-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .card {
+            flex: 1 1 300px;
+            padding: 25px;  
+            border: 2px solid #e769a6;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(238, 99, 175, 0.405);
+            background-color: #ffffff;
+            text-align: left;
+            box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideUp 1.2s ease-out;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(253, 153, 183, 0.564);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #e8678c;
+        }
+
+        .card hr {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            line-height: 1.6;
+            margin: 8px 0;
+            color: #7b4668;
+        }
+
+        .card p strong {
+            color: #c85689;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes popUp {
+            from { opacity: 0; transform: scale(0.5); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
 </head>
 <body>
-    <hi>Halo ini jihan</hi>
+
+    <div class="main-container">
+
+        <a href="index.html" class="btn-back">← Kembali</a>
+
+        <h1>PROFILE JIHAN</h1>
+        <hr style="border: 1px solid #fcbcd3; margin-bottom: 20px;">
+
+        <div class="profile-image">
+            <img src="https://i.pinimg.com/236x/38/c1/d8/38c1d85d7f4db538c1f1e5dd43ad0d8a.jpg" alt="Foto Jihan">
+        </div>
+
+        <div class="cards-wrapper">
+
+            <div class="card">
+                <h2>PROFIL</h2>
+                <hr>
+                <p style="text-align: justify;">
+                    Halo! Nama Saya Jihan Khuzayma Balqis Leslatuhu. Saya seorang pelajar di kelas XII PPLG 1 
+                    dengan nomor absen 20. Saya berasal dari Semarang. Hobi saya adalah mendengarkan musik, saya orang yang mudah beradaptasi 
+                    dengan lingkungan baru. Cita-cita saya adalah menjadi programmer.
+                </p>
+            </div>
+            <div class="card">
+                <h2>Data Diri</h2>
+                <hr>
+                <p><strong>Nama Lengkap & Panggilan:</strong> Jihan Khuzayma Balqis Leslatuhu (Jihan)</p>
+                <p><strong>Kelas & Nomor Absen:</strong> XII PPLG 1 / 20</p>
+                <p><strong>Tempat Tanggal Lahir:</strong> Semarang, 1 Juli 2008</p>
+                <p><strong>Kota Asal:</strong> Semarang</p>
+            </div>
+
+        </div>
+
+    </div>
 </body>
 </html>
