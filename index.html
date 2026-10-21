@@ -1,19 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelompok 5</title>
+
+    <style>
+        a {
+            transition: 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #dce9dc !important;
+            color: #315c45 !important;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px #cbd9cb;
+        }
+
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .kartu {
+            animation: muncul 0.8s ease-out;
+        }
+    </style>
 </head>
-<body>
-    <h1>Kelompok 5</h1>
-    <ul>
-        <li><a href="adhwa.html">Adhwa</a></li>
-        <li><a href="aida.html">Aida</a></li>
-        <li><a href="adit.html">Adit</a></li>
-        <li><a href="hasna.html">Hasna</a></li>
-        <li><a href="jihan.html">Jihan</a></li>
-        <li><a href="marsha.html">Marsha</a></li>
-    </ul>
+
+<body style="font-family: Arial, sans-serif; background: linear-gradient(135deg, #dce9dc, #f7f4e9); margin: 0; padding: 40px 20px; color: #344e41;">
+
+    <div class="kartu" style="max-width: 600px; margin: auto; background-color: #fffdf7; padding: 30px; border-radius: 22px; box-shadow: 0 8px 25px rgba(52,78,65,0.15); text-align: center;">
+
+        <h1 style="color: #527960; margin-bottom: 10px; letter-spacing: 2px;">KELOMPOK 5</h1>
+
+        <p style="color: #78877a;">Selamat datang di halaman anggota kelompok kami!</p>
+
+        <hr style="border: 0; height: 2px; background: #dce9dc; margin: 25px 0;">
+
+        <h2 style="color: #3f6650;">Daftar Anggota</h2>
+
+        <ul style="list-style: none; padding: 0;">
+
+            <li style="margin: 12px 0;">
+                <a href="adhwa.html" style="display: block; background-color: #edf3e9; color: #42634c; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: bold;">Adhwa</a>
+            </li>
+
+            <li style="margin: 12px 0;">
+                <a href="aida.html" style="display: block; background-color: #edf3e9; color: #42634c; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: bold;">Aida</a>
+            </li>
+
+            <li style="margin: 12px 0;">
+                <a href="adit.html" style="display: block; background-color: #edf3e9; color: #42634c; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: bold;">Adit</a>
+            </li>
+
+            <li style="margin: 12px 0;">
+                <a href="hasna.html" style="display: block; background-color: #dce9dc; color: #315c45; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: bold;">Hasna</a>
+            </li>
+
+            <li style="margin: 12px 0;">
+                <a href="jihan.html" style="display: block; background-color: #edf3e9; color: #42634c; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: bold;">Jihan</a>
+            </li>
+
+            <li style="margin: 12px 0;">
+                <a href="marsha.html" style="display: block; background-color: #edf3e9; color: #42634c; padding: 14px; border-radius: 12px; text-decoration: none; font-weight: bold;"> Marsha</a>
+            </li>
+
+        </ul>
+
+        <p style="color: #78877a; font-size: 13px; margin-top: 25px;">
+            Together, Learn and Grow 
+        </p>
+
+    </div>
+
 </body>
 </html>
