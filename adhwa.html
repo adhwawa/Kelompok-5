@@ -1,11 +1,108 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Profil Anggota</title>
+    <style>
+        body {
+            font-family: "Times New Roman", serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff0f5;
+        }
+        h1 {
+            text-align: center;
+        }
+        .foto {
+            display: block;
+            margin: 20px auto;
+            width: 190px;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid black;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            display: flex;
+            gap: 30px;
+            max-width: 1000px;
+            width: 100%;
+            margin: 35px auto;
+            box-sizing: border-box;
+        }
+        .data-diri, .profil {
+            flex: 1;
+            min-width: 0;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+        .data-diri:hover, .profil:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.25);
+        }
+        h2 {
+            margin-top: 0;
+            color: black;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid black;
+        }
+        p {line-height: 1.6;}
+        a {
+            color: blue;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .foto {
+                width: 160px;
+                height: 160px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Adhwaaa</h1>
+    <h1>PROFIL ADHWA</h1>
+    <hr>
+    <img
+        src="https://cdn2.cdnstep.com/ADZ8rrY2sGkdo0cTw4fs/cover-2.thumb256.webp"
+        alt="Foto Adhwa"
+        class="foto">
+    <div class="container">
+        <div class="data-diri">
+            <h2>Data Diri</h2>
+            <hr>
+            <p>Nama Lengkap & Panggilan: Adhwa Maulidtha Cahyono (Adhwa)</p>
+            <p>Kelas & Nomor Absen: XII PPLG 1 / 2</p>
+            <p>Tempat, Tanggal Lahir: Semarang, 3 Maret 2009</p>
+            <p>Kota Asal: Semarang</p>
+        </div>
+
+        <div class="profil">
+            <h2>Profil</h2>
+            <hr>
+            <p>Saya Adhwa Maulidtha Cahyono, seorang siswi SMKN 2 Semarang.</p>
+            <p>Hobi: Scroll TikTok</p>
+            <p>Keahlian/Skill: Memasak, Bernyanyi</p>
+            <p>Cita-cita: Menjadi Orang Sukses</p>
+        </div>
+    </div>
+    <p style="max-width: 1000px; margin: 20px auto;">
+        <a href="index.html">Kembali ke Halaman Utama</a>
+    </p>
+
 </body>
 </html>
