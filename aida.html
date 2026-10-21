@@ -1,13 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Anggota - Aida</title>
+ <style>
+        /* Pengaturan Umum Halaman dengan Nuansa Pink Menyala */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fff0f6;
+            color: #4a4a4a;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header / Judul Utama */
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            color: #ff007f; /* Pink Menyala */
+            font-size: 2.3rem;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(255, 0, 127, 0.2);
+        }
+
+        /* Kotak Utama / Main Container */
+        main {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 0, 127, 0.15);
+            border: 2px solid #ffb3d9;
+        }
+
+        /* Bagian Section */
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #ff1493; /* Deep Pink Menyala */
+            font-size: 1.3rem;
+            border-bottom: 2px solid #ffccd5;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+
+        /* Gaya Foto / Avatar dengan Bingkai Pink Menyala */
+        img {
+            display: block;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ff007f; /* Bingkai Pink Menyala */
+            box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
+        }
+
+        /* Daftar Data Diri (List) */
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ffb3d9;
+            font-size: 0.95rem;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li strong {
+            color: #d9006c;
+        }
+
+        /* Teks Profil & Deskripsi */
+        p {
+            line-height: 1.6;
+            font-size: 0.95rem;
+            color: #555555;
+        }
+
+        
+        hr {
+            border: none;
+            height: 2px;
+            background-color: #ffccd5;
+            margin: 25px 0;
+        }
+
+        
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #ff007f; /* Tombol Pink Menyala */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #d9006c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 0, 127, 0.6);
+        }
+    </style>
 </head>
 <body>
-    <h1>
-        Aida
-    </h1>
+    
+    <header>
+        <h1>Profil Anggota</h1>
+    </header>
+
+    <main>
+        <!-- Bagian Data Diri -->
+        <section>
+            <h2>Data Diri Saya</h2>
+            
+            <!-- Pastikan nama file dan huruf besar/kecil ekstensinya sama persis dengan di folder -->
+            <img src="aida.jpg" alt="Foto Aida" width="150" height="150">
+            
+            <ul>
+                <li><strong>Nama Lengkap:</strong> Aida Saras Tama</li>
+                <li><strong>Nama Panggilan:</strong> Aida</li>
+                <li><strong>Kelas & Nomor Absen:</strong> XII PPLG 1 / 03</li>
+                <li><strong>Tempat, Tanggal Lahir:</strong> Semarang, 27 Mei 2009</li>
+                <li><strong>Kota Asal:</strong> Semarang</li>
+            </ul>
+        </section>
+
+        <hr>
+        <section>
+            <h2>Profil Aida</h2>
+            <p><strong>Deskripsi Singkat:</strong> Halo saya siswi yang bersekolah di SMK Negeri 2 Semarang, saat ini saya menjadi anggota organisasi Rohis SMK Negeri 2 Semarang.</p>
+            <p><strong>Hobi:</strong> Membaca dan Mendesain</p>
+            <p><strong>Keahlian / Skill:</strong> Mendesain Adobe Photoshop</p>
+            <p><strong>Cita-cita:</strong> Data Analyst</p>
+        </section>
+
+        <br>
+        
+        <!-- Link Kembali -->
+        <nav>
+            <a href="index.html">&larr; Kembali ke Beranda (index.html)</a>
+        </nav>
+    </main>
+
 </body>
 </html>
