@@ -7,102 +7,229 @@
         body {
             font-family: "Times New Roman", serif;
             margin: 0;
-            padding: 20px;
-            background-color: #fff0f5;
+            padding: 40px 20px;
+            background-color: #f5f0e8;
+        }
+        @keyframes muncul {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes zoomFoto {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes munculCard {
+            from {
+                opacity: 0;
+                transform: translateY(35px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .halaman {
+            max-width: 900px;
+            width: 85%;
+            margin: 0 auto;
+            padding: 25px;
+            background-color: #e9dccb;
+            border: 3px solid #8b6548;
+            border-radius: 22px;
+            box-shadow: 0 6px 15px rgba(80, 50, 30, 0.15);
+            box-sizing: border-box;
+
+            animation: muncul 1s ease-out;
+        }
+        .kembali {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #68452f;
+            color: white;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 9px;
+            transition: 0.3s;
+
+            animation: muncul 0.8s ease-out 0.2s both;
+        }
+        .kembali:hover {
+            background-color: #9b7455;
+            transform: translateY(-3px);
         }
         h1 {
             text-align: center;
+            color: #765137;
+            font-size: 32px;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+        .garis-judul {
+            border: 0;
+            border-top: 1px solid #b99b7b;
+            margin-bottom: 18px;
         }
         .foto {
             display: block;
-            margin: 20px auto;
-            width: 190px;
-            height: 190px;
+            margin: 18px auto 25px;
+            width: 160px;
+            height: 160px;
             object-fit: cover;
             border-radius: 50%;
-            border: 2px solid black;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 3px solid #8b6548;
+            box-shadow: 0 4px 10px rgba(80, 50, 30, 0.2);
+
+            animation: zoomFoto 1s ease-out 0.3s both;
         }
         .container {
             display: flex;
-            gap: 30px;
-            max-width: 1000px;
+            gap: 18px;
             width: 100%;
-            margin: 35px auto;
+            margin: 20px auto 0;
             box-sizing: border-box;
         }
-        .data-diri, .profil {
+        .profil, .data-diri {
             flex: 1;
             min-width: 0;
             padding: 20px;
-            border: 2px solid black;
+            border: 1.5px solid #9b7455;
             border-radius: 15px;
-            background-color: white;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            background-color: #fffdf9;
+            box-shadow: 0 4px 9px rgba(80, 50, 30, 0.12);
             transition: 0.3s;
         }
-        .data-diri:hover, .profil:hover {
-            transform: translateY(-5px);
-            box-shadow: 8px 10px 20px rgba(0, 0, 0, 0.25);
+        .profil {
+            animation: munculCard 0.8s ease-out 0.5s both;
+        }
+        .data-diri {
+            animation: munculCard 0.8s ease-out 0.8s both;
+        }
+        .profil:hover, .data-diri:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 7px 14px rgba(80, 50, 30, 0.2);
         }
         h2 {
             margin-top: 0;
-            color: black;
+            margin-bottom: 10px;
+            color: #765137;
+            font-size: 25px;
         }
-        hr {
+        .garis-card {
             border: 0;
-            border-top: 1px solid black;
+            border-top: 1px solid #b5a18d;
+            margin-bottom: 15px;
         }
-        p {line-height: 1.6;}
-        a {
-            color: blue;
-            text-decoration: none;
+        p {
+            color: #654b38;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 9px 0;
         }
-        a:hover {
-            text-decoration: underline;
+        .data-diri strong {
+            color: #795638;
         }
-        @media (max-width: 600px) {
-            .container {
-                flex-direction: column;
-                gap: 20px;
+        @media (max-width: 650px) {
+            body {
+                padding: 20px 10px;
+            }
+            .halaman {
+                width: 100%;
+                padding: 18px;
+            }
+            h1 {
+                font-size: 26px;
             }
             .foto {
-                width: 160px;
-                height: 160px;
+                width: 140px;
+                height: 140px;
+            }
+            .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .profil, .data-diri {
+                padding: 18px;
+            }
+            h2 {
+                font-size: 22px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-delay: 0ms !important;
+                transition-duration: 0.01ms !important;
             }
         }
     </style>
 </head>
 
 <body>
-    <h1>PROFIL ADHWA</h1>
-    <hr>
-    <img
-        src="https://cdn2.cdnstep.com/ADZ8rrY2sGkdo0cTw4fs/cover-2.thumb256.webp"
-        alt="Foto Adhwa"
-        class="foto">
-    <div class="container">
-        <div class="data-diri">
-            <h2>Data Diri</h2>
-            <hr>
-            <p>Nama Lengkap & Panggilan: Adhwa Maulidtha Cahyono (Adhwa)</p>
-            <p>Kelas & Nomor Absen: XII PPLG 1 / 2</p>
-            <p>Tempat, Tanggal Lahir: Semarang, 3 Maret 2009</p>
-            <p>Kota Asal: Semarang</p>
-        </div>
+    <div class="halaman">
 
-        <div class="profil">
-            <h2>Profil</h2>
-            <hr>
-            <p>Saya Adhwa Maulidtha Cahyono, seorang siswi SMKN 2 Semarang.</p>
-            <p>Hobi: Scroll TikTok</p>
-            <p>Keahlian/Skill: Memasak, Bernyanyi</p>
-            <p>Cita-cita: Menjadi Orang Sukses</p>
+        <a href="index.html" class="kembali">← Kembali</a>
+
+        <h1>PROFIL ADHWA</h1>
+        <hr class="garis-judul">
+
+        <img
+            src="https://cdn2.cdnstep.com/ADZ8rrY2sGkdo0cTw4fs/cover-2.thumb256.webp"
+            alt="Foto Adhwa"
+            class="foto">
+
+        <div class="container">
+
+            <div class="profil">
+                <h2>PROFIL</h2>
+                <hr class="garis-card">
+                <p>
+                    Halo! Nama saya Adhwa Maulidtha Cahyono.
+                    Saya seorang siswi SMKN 2 Semarang.
+                    Saya memiliki hobi scroll TikTok.
+                    Saya juga memiliki keahlian dalam memasak
+                    dan bernyanyi. Cita-cita saya adalah
+                    menjadi orang sukses.
+                </p>
+            </div>
+
+            <div class="data-diri">
+                <h2>Data Diri</h2>
+                <hr class="garis-card">
+                <p>
+                    <strong>Nama Lengkap & Panggilan:</strong>
+                    Adhwa Maulidtha Cahyono (Adhwa)
+                </p>
+                <p>
+                    <strong>Kelas & Nomor Absen:</strong>
+                    XII PPLG 1 / 2
+                </p>
+                <p>
+                    <strong>Tempat, Tanggal Lahir:</strong>
+                    Semarang, 3 Maret 2009
+                </p>
+                <p>
+                    <strong>Kota Asal:</strong>
+                    Semarang
+                </p>
+            </div>
         </div>
     </div>
-    <p style="max-width: 1000px; margin: 20px auto;">
-        <a href="index.html">Kembali ke Halaman Utama</a>
-    </p>
-
 </body>
 </html>
